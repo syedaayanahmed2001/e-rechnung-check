@@ -1,0 +1,53 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# testing
+/coverage
+/test-results
+/playwright-report
+
+# next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+
+# env files (secrets: GROQ_API_KEY)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# GSD planning (private working files; the public spec is docs/SPEC.md)
+/.planning/
+
+# local caches: downloads, Java validator jar, parity output
+/.cache/
+
+# Third-party artefacts: fetched from pinned releases and verified by SHA-256
+# (scripts/rules/artefacts.json), never committed
+/vendor/
+/corpus/kosit-testsuite/
+# generated from the test suite by scripts/corpus/make-mutations.ts
+/corpus/mutations/
+# SEF compiled from the official XSLT + copied XSD (scripts/rules/build-rules.ts)
+/public/rules/
+# SaxonJS browser runtime, fetched by scripts/rules/fetch-artefacts.ts
+/public/vendor/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
