@@ -1,0 +1,177 @@
+{
+  "summary": [
+    {
+      "corpus": "synthetic",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "documents": 12,
+      "field_accuracy_pct": 100.0,
+      "fields_scored": 330,
+      "present_field_accuracy_pct": 100.0,
+      "hallucinated_fields": 0,
+      "schema_valid_first_pct": 100.0,
+      "schema_valid_final_pct": 100.0,
+      "latency_p50_ms": 0,
+      "latency_p95_ms": 0,
+      "per_field_accuracy_pct": {
+        "buyer.city": 100.0,
+        "buyer.name": 100.0,
+        "buyer.postcode": 100.0,
+        "buyerReference": 100.0,
+        "currency": 100.0,
+        "deliveryDate": 100.0,
+        "dueDate": 100.0,
+        "iban": 100.0,
+        "invoiceNumber": 100.0,
+        "issueDate": 100.0,
+        "lines.count": 100.0,
+        "lines.description": 100.0,
+        "lines.netAmount": 100.0,
+        "seller.city": 100.0,
+        "seller.email": 100.0,
+        "seller.name": 100.0,
+        "seller.postcode": 100.0,
+        "seller.street": 100.0,
+        "seller.vatId": 100.0,
+        "totals.amountDue": 100.0,
+        "totals.grossTotal": 100.0,
+        "totals.netTotal": 100.0,
+        "totals.vatTotal": 100.0
+      }
+    }
+  ],
+  "documents": [
+    {
+      "file": "syn-01.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-02.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-03.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-04.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-05.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-06.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-07.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-08.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-09.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-10.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-11.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    },
+    {
+      "file": "syn-12.pdf",
+      "provider": "baseline",
+      "model": "regex-baseline-v1",
+      "schema_valid_first": true,
+      "schema_valid_final": true,
+      "attempts": 1,
+      "latency_ms": 0,
+      "iban_valid": true,
+      "wrong_fields": []
+    }
+  ]
+}
