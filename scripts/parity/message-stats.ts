@@ -31,3 +31,10 @@ console.log(`schematron messages: ${total}, distinct codes: ${counts.size}`);
 for (const [code, c] of [...counts].sort((a, b) => b[1].files - a[1].files)) {
   console.log(`${code}\tfiles=${c.files}\tmessages=${c.messages}\t${[...c.levels].join(",")}`);
 }
+
+if (process.argv.includes("--write")) {
+  const { writeFileSync } = await import("node:fs");
+  const list = [...counts].sort((a, b) => b[1].files - a[1].files).map(([code, c]) => ({ code, files: c.files }));
+  writeFileSync(join(ROOT, "tests", "fixtures", "firing-rules.json"), JSON.stringify(list, null, 1) + "\n");
+  console.log(`wrote tests/fixtures/firing-rules.json (${list.length} codes)`);
+}
