@@ -1,0 +1,16 @@
+{
+  "01.01a-INVOICE_ubl-report.xml": "standard/01.01a-INVOICE_ubl.xml",
+  "01.01a-INVOICE_uncefact-report.xml": "standard/01.01a-INVOICE_uncefact.xml",
+  "04.01a-INVOICE_ubl-report.xml": "extension/04.01a-INVOICE_ubl.xml",
+  "02.01a-cvd_INVOICE_ubl-report.xml": "technical-cases/cvd/02.01a-cvd_INVOICE_ubl.xml",
+  "01.01_comprehensive_test_uncefact-report.xml": "technical-cases/cius/01.01_comprehensive_test_uncefact.xml",
+  "01.01a-INVOICE_ubl__wrong-payable-amount-report.xml": "mutations/01.01a-INVOICE_ubl__wrong-payable-amount.xml",
+  "01.01a-INVOICE_uncefact__drop-buyer-reference-report.xml": "mutations/01.01a-INVOICE_uncefact__drop-buyer-reference.xml",
+  "01.01a-INVOICE_ubl__unknown-element-report.xml": "mutations/01.01a-INVOICE_ubl__unknown-element.xml",
+  "01.01a-INVOICE_ubl__truncated-report.xml": "mutations/01.01a-INVOICE_ubl__truncated.xml",
+  "01.01a-INVOICE_ubl__unknown-specification-report.xml": "mutations/01.01a-INVOICE_ubl__unknown-specification.xml",
+  "01.05_minimal_test_ubl__plain-en16931-report.xml": "mutations/01.05_minimal_test_ubl__plain-en16931.xml",
+  "01.01a-INVOICE_uncefact__bad-iban-report.xml": "mutations/01.01a-INVOICE_uncefact__bad-iban.xml",
+  "02.01a-INVOICE_uncefact__drop-seller-tax-ids-report.xml": "mutations/02.01a-INVOICE_uncefact__drop-seller-tax-ids.xml",
+  "01.05_minimal_test_uncefact__bad-issue-date-report.xml": "mutations/01.05_minimal_test_uncefact__bad-issue-date.xml"
+}

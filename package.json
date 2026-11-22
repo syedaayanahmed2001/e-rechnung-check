@@ -1,0 +1,43 @@
+{
+  "name": "e-rechnung-check",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3300",
+    "build": "next build",
+    "start": "next start -p 3300",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "rules": "node --no-warnings scripts/rules/fetch-artefacts.ts && node --no-warnings scripts/rules/build-rules.ts && node --no-warnings scripts/corpus/make-mutations.ts",
+    "parity": "node --no-warnings scripts/rules/fetch-artefacts.ts --all && node --no-warnings scripts/parity/run-parity.ts",
+    "corpus:external": "node --no-warnings scripts/corpus/fetch-external.ts"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.12",
+    "fflate": "^0.8.3",
+    "libxml2-wasm": "^0.7.2",
+    "next": "16.4.6",
+    "pdf-lib": "^1.17.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "saxon-js": "^2.7.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5",
+    "vitest": "^5.1.1",
+    "xslt3": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

@@ -117,7 +117,13 @@ The spike was time-boxed to about 2 hours, before any product code was written.
 - **Result:** **197 / 197 reports identical** to the KoSIT Java validator 1.6.3. That is 86 of 86 official
   XRechnung 3.0.2 test-suite invoices, and 111 of 111 fault-injected variants covering 24 distinct rule
   codes, XSD failures, broken XML and unknown specification identifiers.
-- **Performance:** about 50–66 ms per invoice after warm-up (Node). The rule files compress from
+- **Extended run, and a real finding:** on 568 files (adding 427 variants over all test-suite bases and
+  55 ZUGFeRD-corpus XML samples), 2 files differed. SaxonJS stores `xs:integer` as a double, and the
+  official IBAN check (BR-DE-19) computes `xs:integer(24 digits) mod 97`. The official files stay
+  untouched: a generated wrapper imports them and overrides that one function with `xs:decimal`,
+  which is exact in SaxonJS. The build fails if KoSIT changes the function. With the override,
+  **568 / 568 are identical**.
+- **Performance:** about 50–80 ms per invoice after warm-up (Node). The rule files compress from
   about 21 MB of SEF JSON to about 0.55 MB gzip.
 - **Blocker solved:** the official report stylesheet uses a schema-aware pattern that SaxonJS cannot
   compile. Its 60 lines of verdict logic are ported to TypeScript, and parity proves the port.

@@ -1,0 +1,41 @@
+{
+  "$comment": "Pinned third-party artefacts. Downloaded by scripts/rules/fetch-artefacts.ts, verified by SHA-256, never committed. Licences: see THIRD_PARTY_NOTICES.md.",
+  "artefacts": [
+    {
+      "id": "kosit-config",
+      "name": "KoSIT Validator Configuration XRechnung 3.0.2 (release 2026-08-31)",
+      "url": "https://github.com/itplr-kosit/validator-configuration-xrechnung/releases/download/v2026-08-31/xrechnung-3.0.2-validator-configuration-2026-08-31.zip",
+      "sha256": "2530cd107c414511c5d0462ec10f886910395abfca820db82e83d70bf01221a8",
+      "licence": "Apache-2.0 (bundles EN 16931 Schematron: EUPL-1.2; UBL 2.1 XSD: OASIS; CII D16B XSD: UN/CEFACT)",
+      "extractTo": "vendor/kosit/validator-configuration"
+    },
+    {
+      "id": "kosit-testsuite",
+      "name": "KoSIT XRechnung Test Suite 3.0.2 (2026-08-31)",
+      "url": "https://github.com/itplr-kosit/xrechnung-testsuite/releases/download/v2026-08-31/xrechnung-3.0.2-testsuite-2026-08-31.zip",
+      "sha256": "1e81ef7563e0fa04c0e0b0631318a7e0843a3c0beb57d83ef95ac0c4a095e3d7",
+      "licence": "Apache-2.0",
+      "extractTo": "corpus/kosit-testsuite/instances",
+      "only": "instances/"
+    },
+    {
+      "id": "kosit-validator",
+      "name": "KoSIT Validator 1.6.3 (standalone jar, reference implementation for the parity job)",
+      "url": "https://github.com/itplr-kosit/validator/releases/download/v1.6.3/validator-1.6.3-standalone.jar",
+      "sha256": "799e64befca97d4080e03608c80b85dd5a5ecc5f4ae4f35d1116ec2855b9a7c9",
+      "licence": "Apache-2.0",
+      "saveAs": ".cache/kosit/validator-1.6.3-standalone.jar",
+      "optional": true
+    },
+    {
+      "id": "saxonjs-browser",
+      "name": "SaxonJS 2.7 browser build (SaxonJS2.js)",
+      "url": "https://downloads.saxonica.com/SaxonJS/2/SaxonJS-2.7.zip",
+      "sha256": "13cbd2e6eb0a80dcf64067e88cb5eab54a52c3a29e01fe0b156346895585845d",
+      "licence": "Saxonica SaxonJS public licence v1.0: free of charge, not open source; binary redistribution as part of an application permitted with notice",
+      "extractTo": "public/vendor/saxon-js",
+      "only": "saxon-js/",
+      "files": ["saxon-js/SaxonJS2.js", "saxon-js/LICENSE.txt"]
+    }
+  ]
+}
