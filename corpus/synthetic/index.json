@@ -1,0 +1,62 @@
+[
+  {
+    "id": "syn-01",
+    "layout": 0,
+    "lines": 5
+  },
+  {
+    "id": "syn-02",
+    "layout": 1,
+    "lines": 2
+  },
+  {
+    "id": "syn-03",
+    "layout": 2,
+    "lines": 3
+  },
+  {
+    "id": "syn-04",
+    "layout": 0,
+    "lines": 2
+  },
+  {
+    "id": "syn-05",
+    "layout": 1,
+    "lines": 2
+  },
+  {
+    "id": "syn-06",
+    "layout": 2,
+    "lines": 4
+  },
+  {
+    "id": "syn-07",
+    "layout": 0,
+    "lines": 2
+  },
+  {
+    "id": "syn-08",
+    "layout": 1,
+    "lines": 2
+  },
+  {
+    "id": "syn-09",
+    "layout": 2,
+    "lines": 4
+  },
+  {
+    "id": "syn-10",
+    "layout": 0,
+    "lines": 4
+  },
+  {
+    "id": "syn-11",
+    "layout": 1,
+    "lines": 5
+  },
+  {
+    "id": "syn-12",
+    "layout": 2,
+    "lines": 4
+  }
+]

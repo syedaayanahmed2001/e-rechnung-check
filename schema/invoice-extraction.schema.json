@@ -1,0 +1,1078 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "invoiceNumber": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Invoice number (Rechnungsnummer)",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Invoice number (Rechnungsnummer)"
+    },
+    "issueDate": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Invoice date (Rechnungsdatum). ISO date YYYY-MM-DD."
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Invoice date (Rechnungsdatum)"
+    },
+    "deliveryDate": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Delivery or service date (Liefer-/Leistungsdatum). ISO date YYYY-MM-DD."
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Delivery or service date (Liefer-/Leistungsdatum)"
+    },
+    "dueDate": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Payment due date. ISO date YYYY-MM-DD."
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Payment due date"
+    },
+    "currency": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Currency as ISO 4217 code, e.g. EUR",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Currency as ISO 4217 code, e.g. EUR"
+    },
+    "buyerReference": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Buyer reference / Leitweg-ID / order reference given by the buyer",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Buyer reference / Leitweg-ID / order reference given by the buyer"
+    },
+    "seller": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Legal or trading name",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Legal or trading name"
+        },
+        "street": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Street and house number",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Street and house number"
+        },
+        "postcode": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Post code",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Post code"
+        },
+        "city": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "City",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "City"
+        },
+        "country": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Country as ISO 3166-1 alpha-2 code, e.g. DE",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Country as ISO 3166-1 alpha-2 code, e.g. DE"
+        },
+        "vatId": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "VAT identification number (USt-IdNr.), e.g. DE123456789",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "VAT identification number (USt-IdNr.), e.g. DE123456789"
+        },
+        "taxNumber": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "German tax number (Steuernummer), e.g. 12/345/67890",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "German tax number (Steuernummer), e.g. 12/345/67890"
+        },
+        "email": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "E-mail address",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "E-mail address"
+        },
+        "phone": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Telephone number",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Telephone number"
+        },
+        "contactName": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Name of the contact person",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Name of the contact person"
+        }
+      },
+      "required": [
+        "name",
+        "street",
+        "postcode",
+        "city",
+        "country",
+        "vatId",
+        "taxNumber",
+        "email",
+        "phone",
+        "contactName"
+      ],
+      "additionalProperties": false
+    },
+    "buyer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Legal or trading name",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Legal or trading name"
+        },
+        "street": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Street and house number",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Street and house number"
+        },
+        "postcode": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Post code",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Post code"
+        },
+        "city": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "City",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "City"
+        },
+        "country": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Country as ISO 3166-1 alpha-2 code, e.g. DE",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Country as ISO 3166-1 alpha-2 code, e.g. DE"
+        },
+        "vatId": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "VAT identification number (USt-IdNr.), e.g. DE123456789",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "VAT identification number (USt-IdNr.), e.g. DE123456789"
+        },
+        "taxNumber": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "German tax number (Steuernummer), e.g. 12/345/67890",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "German tax number (Steuernummer), e.g. 12/345/67890"
+        },
+        "email": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "E-mail address",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "E-mail address"
+        },
+        "phone": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Telephone number",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Telephone number"
+        },
+        "contactName": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Name of the contact person",
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Name of the contact person"
+        }
+      },
+      "required": [
+        "name",
+        "street",
+        "postcode",
+        "city",
+        "country",
+        "vatId",
+        "taxNumber",
+        "email",
+        "phone",
+        "contactName"
+      ],
+      "additionalProperties": false
+    },
+    "iban": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Seller IBAN for payment",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Seller IBAN for payment"
+    },
+    "bic": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Seller BIC",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Seller BIC"
+    },
+    "paymentTerms": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Payment terms as written",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "description": "Exact text copied from the document that this value was read from, or null.",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "value",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "Payment terms as written"
+    },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "Item name or description",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source": {
+                "description": "Exact text copied from the document that this value was read from, or null.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "source"
+            ],
+            "additionalProperties": false,
+            "description": "Item name or description"
+          },
+          "quantity": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "Quantity. Decimal number, dot as separator, no currency sign.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "source": {
+                "description": "Exact text copied from the document that this value was read from, or null.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "source"
+            ],
+            "additionalProperties": false,
+            "description": "Quantity"
+          },
+          "unit": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "Unit as written, e.g. Stück, Std., kg",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source": {
+                "description": "Exact text copied from the document that this value was read from, or null.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "source"
+            ],
+            "additionalProperties": false,
+            "description": "Unit as written, e.g. Stück, Std., kg"
+          },
+          "unitPrice": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "Net unit price. Decimal number, dot as separator, no currency sign.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "source": {
+                "description": "Exact text copied from the document that this value was read from, or null.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "source"
+            ],
+            "additionalProperties": false,
+            "description": "Net unit price"
+          },
+          "netAmount": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "Line net amount (quantity x unit price, after line discounts). Decimal number, dot as separator, no currency sign.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "source": {
+                "description": "Exact text copied from the document that this value was read from, or null.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "source"
+            ],
+            "additionalProperties": false,
+            "description": "Line net amount (quantity x unit price, after line discounts)"
+          },
+          "vatRate": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "VAT rate in percent, e.g. 19. Decimal number, dot as separator, no currency sign.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "source": {
+                "description": "Exact text copied from the document that this value was read from, or null.",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "source"
+            ],
+            "additionalProperties": false,
+            "description": "VAT rate in percent, e.g. 19"
+          }
+        },
+        "required": [
+          "description",
+          "quantity",
+          "unit",
+          "unitPrice",
+          "netAmount",
+          "vatRate"
+        ],
+        "additionalProperties": false
+      },
+      "description": "Invoice lines in document order"
+    },
+    "totals": {
+      "type": "object",
+      "properties": {
+        "netTotal": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Total without VAT (Nettobetrag). Decimal number, dot as separator, no currency sign.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Total without VAT (Nettobetrag)"
+        },
+        "vatTotal": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Total VAT amount (Umsatzsteuer). Decimal number, dot as separator, no currency sign.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Total VAT amount (Umsatzsteuer)"
+        },
+        "grossTotal": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Total with VAT (Bruttobetrag). Decimal number, dot as separator, no currency sign.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Total with VAT (Bruttobetrag)"
+        },
+        "amountDue": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "description": "Amount due for payment (Zahlbetrag). Decimal number, dot as separator, no currency sign.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "source": {
+              "description": "Exact text copied from the document that this value was read from, or null.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "value",
+            "source"
+          ],
+          "additionalProperties": false,
+          "description": "Amount due for payment (Zahlbetrag)"
+        }
+      },
+      "required": [
+        "netTotal",
+        "vatTotal",
+        "grossTotal",
+        "amountDue"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "invoiceNumber",
+    "issueDate",
+    "deliveryDate",
+    "dueDate",
+    "currency",
+    "buyerReference",
+    "seller",
+    "buyer",
+    "iban",
+    "bic",
+    "paymentTerms",
+    "lines",
+    "totals"
+  ],
+  "additionalProperties": false
+}
