@@ -86,6 +86,11 @@ function main(): void {
     console.log(`compiled   ${location}${wrapper ? " (with shim)" : ""} (${Date.now() - t0} ms)`);
   }
 
+  // pdf.js worker for Convert (Apache-2.0), served next to the SaxonJS browser build.
+  const pdfWorker = join(ROOT, "node_modules", "pdfjs-dist", "build", "pdf.worker.min.mjs");
+  mkdirSync(join(ROOT, "public", "vendor", "pdfjs"), { recursive: true });
+  cpSync(pdfWorker, join(ROOT, "public", "vendor", "pdfjs", "pdf.worker.min.mjs"));
+
   writeFileSync(
     manifestPath,
     JSON.stringify(

@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --ink: #1b1b1a;
+  --muted: #55554f;
+  --line: #d4d4ce;
+  --accent: #1f4fd1;
+  --ok: #17663a;
+  --ok-bg: #e6f4ea;
+  --bad: #a3231b;
+  --bad-bg: #fbe9e7;
+  --warn: #6e4a00;
+  --warn-bg: #fff4d6;
+  --info: #2c4a7a;
+  --info-bg: #e8eef8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121211;
+    --surface: #1c1c1b;
+    --ink: #ececea;
+    --muted: #b1b1ab;
+    --line: #3a3a37;
+    --accent: #8fb0ff;
+    --ok: #7fd49c;
+    --ok-bg: #12301d;
+    --bad: #ff9b91;
+    --bad-bg: #3a1714;
+    --warn: #ffd27a;
+    --warn-bg: #3a2c0c;
+    --info: #a9c4f5;
+    --info-bg: #17233a;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-ok: var(--ok);
+  --color-ok-bg: var(--ok-bg);
+  --color-bad: var(--bad);
+  --color-bad-bg: var(--bad-bg);
+  --color-warn: var(--warn);
+  --color-warn-bg: var(--warn-bg);
+  --color-info: var(--info);
+  --color-info-bg: var(--info-bg);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+html {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-text-size-adjust: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Long identifiers (XPaths, IBANs, URNs) must wrap instead of widening the page on phones. */
+code,
+.font-mono {
+  overflow-wrap: anywhere;
+}
+
+.grid > * {
+  min-width: 0;
+}
