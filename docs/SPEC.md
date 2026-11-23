@@ -38,11 +38,13 @@ flowchart LR
 - **Check** runs the official KoSIT validator configuration for XRechnung 3.0.2 (release 2026-08-31).
   The Schematron XSLT is compiled once to SaxonJS SEF, unchanged. XML Schema runs in libxml2 compiled
   to WebAssembly. The verdict logic of the official report stylesheet is ported to TypeScript, because
-  that stylesheet uses a schema-aware pattern SaxonJS cannot compile. Everything runs in a Web Worker
-  in the browser, so the invoice never leaves the device.
+  that stylesheet uses a schema-aware pattern SaxonJS cannot compile. Everything runs in the browser,
+  so the invoice never leaves the device. It runs on the main thread, not in a Web Worker: the SaxonJS
+  browser build needs sloppy-mode globals and `window`, and libxml2-wasm is ESM with top-level await.
 - **Parity:** CI runs the official KoSIT Java validator 1.6.3 and the JS validator on the same corpus
   and fails on any difference. That corpus is the official test suite, generated fault-injected
-  variants, synthetic invoices, and the ZUGFeRD community corpus.
+  variants, synthetic invoices, and the ZUGFeRD community corpus. Latest result: **580/580
+  identical**.
 - **Convert:** a Zod schema is the single source of truth. JSON Schema is generated from it for the
   models' structured output, and the Python eval reads the same JSON Schema. There is one repair retry
   on schema failure. Every field carries the source snippet it was read from. Totals are computed in
@@ -75,7 +77,7 @@ ID to the tests that prove it.
 
 ### Convert
 - **CONV-01** The Zod schema is the source of truth. The generated JSON Schema is committed and checked for staleness. A Pydantic drift test runs in Python.
-- **CONV-02** A PDF text layer goes to the text model. Images go to the vision model, or OCR plus the text model.
+- **CONV-02** A PDF text layer goes to the text model. Photos and scanned PDFs go to the vision model. (An OCR path was dropped: every provider has a vision model.)
 - **CONV-03** Providers: Groq free tier (`openai/gpt-oss-120b`, `qwen/qwen3.8-27b`), Ollama (`qwen3:4b`, `granite3.2-vision:2b`), and recorded fixtures without a key. All models are open-weight under Apache-2.0.
 - **CONV-04** Schema validation, then one repair retry, then a visible failure.
 - **CONV-05** Each field has a source snippet, and the snippet is verified against the document text.
