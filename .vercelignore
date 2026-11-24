@@ -1,0 +1,9 @@
+.planning
+.cache
+.env*
+!.env.example
+node_modules
+coverage
+test-results
+playwright-report
+eval/.venv
